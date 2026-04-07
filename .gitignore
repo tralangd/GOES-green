@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+.vscode/
+.devcontainer/
+data/
+
+fig/green_distribution_1.png
+fig/green_distribution_2.png
+fig/green_distribution_3.png
+fig/green_heatmap.mp4
+fig/LUT_slices.mp4
