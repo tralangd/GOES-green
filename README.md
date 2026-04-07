@@ -65,11 +65,11 @@ import numpy as np
 LUT = np.fromfile("LUT.bin", dtype=np.uint8).reshape(256,256,256)
 
 # read a single LUT value
-g = LUT(b,r,v)
+g = LUT[b,r,v]
 
 # generate a synthetic green channel
 # assuming B R V are uint8 arrays with the same dimensions
-G = LUT(B,R,V)
+G = LUT[B,R,V]
 ```
 
 
