@@ -18,12 +18,13 @@ If you want a ready-to-use LUT, you can download it from the [Releases](https://
 This setup was developed on Ubuntu 26.04 with Python 3.14, GDAL 3.12.2, and libjxl-tools 0.11.1 installed. In addition, the setup relies on a few non-default Python packages: boto3, datetime, matplotlib, pillow, pillow-jxl-plugin, polar2grid, scipy, and tqdm.
 
 If you wish, you may use the provided Dockerfile to build an Ubuntu container with all the necessary dependencies.
-
-`docker build -t goesgreen:"latest" . `
-
+```
+docker build -t goesgreen:"latest" . 
+```
 Then run the container with a persistent storage volume to share a `data` directory between host and container.
-
-`docker run --rm --interactive --tty --volume "./data":/app/data goesgreen`
+```
+docker run --rm --interactive --tty --volume "./data":/app/data goesgreen
+```
 
 The procedure to create the color LUT is split into multiple python functions, each representing a single step of the overall process. Use the --help option of each python function for specific usage instructions.
 
